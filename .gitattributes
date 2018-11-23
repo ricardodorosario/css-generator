@@ -1,4 +1,3 @@
-app/scss/* linguist-vendored=false
 webpack.server.js linguist-vendored=true
 webpack.watch.js linguist-vendored=true
 webpack.build.js linguist-vendored=true
