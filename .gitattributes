@@ -1,1 +1,2 @@
 app/scss/* linguist-vendored
+*.scss linguist-vendored=false
