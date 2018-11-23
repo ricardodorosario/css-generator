@@ -1,0 +1,159 @@
+@import 'variaveis';
+
+/*! Comentário que aparece no minifief */
+/* Comentário que aparece no CSS*/
+// Comentário que só aparece no SCSS
+$versao:'1.0.0';
+$classe:sidebar;
+$propriedade:'border';
+/*
+Versão: #{ $versao }
+*/
+%exemplo-nao-processar {
+  body {
+    background-color: black;
+  }
+  &:hover {
+    color: white;
+  }
+  &-body {
+    color: black;
+    border: {
+      color: black;
+      style: solid;
+      width: 1px;
+    }
+  }
+  #{$classe} {
+    color: blue;
+    #{$propriedade}-color: red;
+  }
+}
+
+//Aula sobre menu
+.componente-menu-heranca {
+  width: 100%;
+  background: $cor-principal;
+}
+
+body {
+  margin: 0px;
+}
+.menu {
+  @extend .componente-menu-heranca;
+  margin: 0px;
+  ul {
+    width: 1000px;
+    margin: 0 auto;
+    list-style: none;
+    li {
+      display: inline;
+      a {
+        line-height: 0;
+        display: inline-block;
+        padding: $altura-menu/2 15px;
+        text-decoration: none;
+        &.a1{
+          @include menu-colorido($cor-principal);
+          &:hover, &:focus{
+            @include menu-colorido($cor-secundaria, $cor-principal);
+          };
+        }
+        &.a2{
+          @include menu-verde;
+          &:hover, &:focus{
+            @include menu-colorido($cor-secundaria, $cor-principal);
+          };
+        }
+      }
+    }
+  }
+}
+
+// seção 4 - menu
+@mixin menu($cor-principal:black, $cor-secundaria:white, $altura-menu:40px) {
+  .menu-4 {
+    width: 100%;
+    background: $cor-principal;
+    margin: 0px;
+    ul {
+      width: 1000px;
+      margin: 0 auto;
+      list-style: none;
+      li {
+        display: inline;
+        a {
+          line-height: 0;
+          display: inline-block;
+          padding: $altura-menu/2 15px;
+          text-decoration: none;
+          @include menu-colorido($cor-principal, $cor-secundaria);
+          &:hover, &:focus{
+            @include menu-colorido($cor-secundaria, $cor-principal);
+          };
+        }
+      }
+    }
+  }
+}
+
+$black: bla + ck;
+@include menu($black, white, 50px);
+
+
+/* Teste com FOR */
+@for $i from 1 to 6{
+  .bg-#{$i}{
+    background: #123 * $i;
+  }
+}
+
+/* Teste com EACH */
+@each $tema in manha, tarde, noite {
+  @if($tema == manha){
+    $background:white !global;
+  }@else if($tema == tarde){
+    $background:blue !global;
+  }@else if($tema == noite){
+    $background:black !global;
+  }
+  .bg-#{$tema}{
+    background: $background;
+  }
+}
+
+/* Teste com WHILE */
+
+.linha {
+  margin-left: auto;
+  margin-right: auto;
+}
+%col-l {
+  margin-left: auto;
+  left: auto;
+  right: auto;
+  float: left;
+  color: white;
+}
+$cont:1;
+$colunas:12;
+$tam-coluna:100% / $colunas;
+$aux: $colunas;
+@while $cont <= $aux {
+  .col-#{$cont}{
+    width: $tam-coluna * $cont;
+    @extend %col-l;
+    background: #123 * $cont;
+  }
+  $cont: $cont + 1;
+}
+
+/* Função */
+
+@function cubo($valor, $un:px){
+  $res: $valor * $valor * $valor;
+  @return $res + $un;
+}
+.funcao {
+  font-size: cubo(3, pt);
+}

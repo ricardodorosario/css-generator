@@ -1,0 +1,150 @@
+@charset "UTF-8";
+/*! Comentário que aparece no minifief */
+/* Comentário que aparece no CSS*/
+/*
+Versão: 1.0.0
+*/
+.componente-menu-heranca, .menu {
+  width: 100%;
+  background: #888; }
+
+body {
+  margin: 0px; }
+
+.menu {
+  margin: 0px; }
+  .menu ul {
+    width: 1000px;
+    margin: 0 auto;
+    list-style: none; }
+    .menu ul li {
+      display: inline; }
+      .menu ul li a {
+        line-height: 0;
+        display: inline-block;
+        padding: 20px 15px;
+        text-decoration: none; }
+        .menu ul li a.a1 {
+          background-color: #333333;
+          color: white; }
+          .menu ul li a.a1:hover, .menu ul li a.a1:focus {
+            background-color: #333333;
+            color: #888; }
+        .menu ul li a.a2 {
+          background-color: green;
+          color: #fff; }
+          .menu ul li a.a2:hover, .menu ul li a.a2:focus {
+            background-color: #333333;
+            color: #888; }
+
+.menu-4 {
+  width: 100%;
+  background: black;
+  margin: 0px; }
+  .menu-4 ul {
+    width: 1000px;
+    margin: 0 auto;
+    list-style: none; }
+    .menu-4 ul li {
+      display: inline; }
+      .menu-4 ul li a {
+        line-height: 0;
+        display: inline-block;
+        padding: 25px 15px;
+        text-decoration: none;
+        background-color: #333333;
+        color: white; }
+        .menu-4 ul li a:hover, .menu-4 ul li a:focus {
+          background-color: #333333;
+          color: black; }
+
+/* Teste com FOR */
+.bg-1 {
+  background: #112233; }
+
+.bg-2 {
+  background: #224466; }
+
+.bg-3 {
+  background: #336699; }
+
+.bg-4 {
+  background: #4488cc; }
+
+.bg-5 {
+  background: #55aaff; }
+
+/* Teste com EACH */
+.bg-manha {
+  background: white; }
+
+.bg-tarde {
+  background: blue; }
+
+.bg-noite {
+  background: black; }
+
+/* Teste com WHILE */
+.linha {
+  margin-left: auto;
+  margin-right: auto; }
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+  margin-left: auto;
+  left: auto;
+  right: auto;
+  float: left;
+  color: white; }
+
+.col-1 {
+  width: 8.33333%;
+  background: #112233; }
+
+.col-2 {
+  width: 16.66667%;
+  background: #224466; }
+
+.col-3 {
+  width: 25%;
+  background: #336699; }
+
+.col-4 {
+  width: 33.33333%;
+  background: #4488cc; }
+
+.col-5 {
+  width: 41.66667%;
+  background: #55aaff; }
+
+.col-6 {
+  width: 50%;
+  background: #66ccff; }
+
+.col-7 {
+  width: 58.33333%;
+  background: #77eeff; }
+
+.col-8 {
+  width: 66.66667%;
+  background: #88ffff; }
+
+.col-9 {
+  width: 75%;
+  background: #99ffff; }
+
+.col-10 {
+  width: 83.33333%;
+  background: #aaffff; }
+
+.col-11 {
+  width: 91.66667%;
+  background: #bbffff; }
+
+.col-12 {
+  width: 100%;
+  background: #ccffff; }
+
+/* Função */
+.funcao {
+  font-size: 27pt; }
+
