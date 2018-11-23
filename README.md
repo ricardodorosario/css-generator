@@ -7,7 +7,7 @@ Instalação das dependências:
 ```
 npm install
 ```
-Execução do gerador do styles.css inline
+Execução do gerador do style.css inline
 ```
 npm run start:watch
 ```
@@ -15,7 +15,7 @@ Execução do html de exemplo rodando na porta 3000
 ```
 npm run start
 ```
-Geração do arquivo styles.min.css
+Geração do arquivo style.min.css
 ```
 npm run build
 ```
