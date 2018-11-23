@@ -1,2 +1,4 @@
-./app/scss/* linguist-vendored=true
-
+app/scss/* linguist-vendored=true
+webpack.server.js linguist-vendored=false
+webpack.watch.js linguist-vendored=false
+webpack.build.js linguist-vendored=false
