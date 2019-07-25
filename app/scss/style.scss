@@ -1,11 +1,11 @@
-@import 'variaveis';
+@import "variaveis";
 
 /*! Comentário que aparece no minifief */
 /* Comentário que aparece no CSS*/
 // Comentário que só aparece no SCSS
-$versao:'1.0.0';
-$classe:sidebar;
-$propriedade:'border';
+$versao: "1.0.0";
+$classe: sidebar;
+$propriedade: "border";
 /*
 Versão: #{ $versao }
 */
@@ -53,17 +53,19 @@ body {
         display: inline-block;
         padding: $altura-menu/2 15px;
         text-decoration: none;
-        &.a1{
+        &.a1 {
           @include menu-colorido($cor-principal);
-          &:hover, &:focus{
+          &:hover,
+          &:focus {
             @include menu-colorido($cor-secundaria, $cor-principal);
-          };
+          }
         }
-        &.a2{
+        &.a2 {
           @include menu-verde;
-          &:hover, &:focus{
+          &:hover,
+          &:focus {
             @include menu-colorido($cor-secundaria, $cor-principal);
-          };
+          }
         }
       }
     }
@@ -71,7 +73,7 @@ body {
 }
 
 // seção 4 - menu
-@mixin menu($cor-principal:black, $cor-secundaria:white, $altura-menu:40px) {
+@mixin menu($cor-principal: black, $cor-secundaria: white, $altura-menu: 40px) {
   .menu-4 {
     width: 100%;
     background: $cor-principal;
@@ -88,9 +90,10 @@ body {
           padding: $altura-menu/2 15px;
           text-decoration: none;
           @include menu-colorido($cor-principal, $cor-secundaria);
-          &:hover, &:focus{
+          &:hover,
+          &:focus {
             @include menu-colorido($cor-secundaria, $cor-principal);
-          };
+          }
         }
       }
     }
@@ -100,24 +103,23 @@ body {
 $black: bla + ck;
 @include menu($black, white, 50px);
 
-
 /* Teste com FOR */
-@for $i from 1 to 6{
-  .bg-#{$i}{
+@for $i from 1 to 6 {
+  .bg-#{$i} {
     background: #123 * $i;
   }
 }
 
 /* Teste com EACH */
 @each $tema in manha, tarde, noite {
-  @if($tema == manha){
-    $background:white !global;
-  }@else if($tema == tarde){
-    $background:blue !global;
-  }@else if($tema == noite){
-    $background:black !global;
+  @if ($tema == manha) {
+    $background: white !global;
+  } @else if($tema == tarde) {
+    $background: blue !global;
+  } @else if($tema == noite) {
+    $background: black !global;
   }
-  .bg-#{$tema}{
+  .bg-#{$tema} {
     background: $background;
   }
 }
@@ -135,12 +137,12 @@ $black: bla + ck;
   float: left;
   color: white;
 }
-$cont:1;
-$colunas:12;
-$tam-coluna:100% / $colunas;
+$cont: 1;
+$colunas: 12;
+$tam-coluna: 100% / $colunas;
 $aux: $colunas;
 @while $cont <= $aux {
-  .col-#{$cont}{
+  .col-#{$cont} {
     width: $tam-coluna * $cont;
     @extend %col-l;
     background: #123 * $cont;
@@ -150,7 +152,7 @@ $aux: $colunas;
 
 /* Função */
 
-@function cubo($valor, $un:px){
+@function cubo($valor, $un: px) {
   $res: $valor * $valor * $valor;
   @return $res + $un;
 }

@@ -1,6 +1,11 @@
 # Dependency directories
 node_modules/
 
+#dist
+dist/
+app/test/css/
+app/test/app.js
+
 # Package-lock
 package-lock.json
 

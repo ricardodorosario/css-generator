@@ -2,20 +2,20 @@ $cor-principal: #888;
 $cor-secundaria: #fff;
 $altura-menu: 40px;
 
-@mixin colorir-tom($propriedade, $cor, $tom){
-  @if($tom == 1){
+@mixin colorir-tom($propriedade, $cor, $tom) {
+  @if ($tom == 1) {
     #{$propriedade}: lighten($cor, 20%);
-  }@else if($tom == 2){
+  } @else if($tom == 2) {
     #{$propriedade}: lighten($cor, 40%);
-  }@else if($tom == 3){
+  } @else if($tom == 3) {
     #{$propriedade}: lighten($cor, 60%);
-  }@else if($tom == 4){
+  } @else if($tom == 4) {
     #{$propriedade}: lighten($cor, 80%);
   }
 }
 
 @mixin colorir-propriedade($propriedade, $cor) {
-  #{$propriedade}:$cor;
+  #{$propriedade}: $cor;
 }
 
 @mixin menu-verde {
@@ -23,7 +23,7 @@ $altura-menu: 40px;
   color: #fff;
 }
 
-@mixin menu-colorido($principal, $secundaria:white) {
+@mixin menu-colorido($principal, $secundaria: white) {
   @include colorir-tom(background-color, black, 1);
   color: $secundaria;
 }

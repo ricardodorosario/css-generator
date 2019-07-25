@@ -1,21 +1,37 @@
-# curso-sass-webpack
-Curso Sass utilizando Webpack
+# sass-webpack-generator
 
-## Sequência de execução:
+Sass generator with Webpack
 
-Instalação das dependências:
+## Execution sequence:
+
+Installing the dependencies:
+
 ```
 npm install
 ```
-Execução do gerador do style.css inline
+
+Starting the style.css inline generator
+
 ```
 npm run start:watch
 ```
-Execução do html de exemplo rodando na porta 3000
+
+Starting the html example on port 3000
+
 ```
 npm run start
 ```
-Geração do arquivo style.min.css
+
+Generating the style.min.css file
+
 ```
 npm run build
 ```
+
+## Where are the files?
+
+Put the scss files here: ./app/scss/
+Put a style.scss file (required) in the directory above
+The html example is here: ./app/test/
+The style.css inline will be created here: ./app/test/css/
+After you build your project, the style.min.css will be here: ./dist/

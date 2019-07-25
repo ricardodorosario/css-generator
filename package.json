@@ -12,7 +12,7 @@
   "scripts": {
     "start": "webpack-dev-server --watch --config webpack.server.js --progress --colors --inline",
     "start:watch": "webpack --watch --config webpack.watch.js",
-    "build": "webpack --config webpack.config.js --progress -p --display-error-details"
+    "build": "webpack --config webpack.build.js --progress -p --display-error-details"
   },
   "dependencies": {
     "css-loader": "^1.0.0",
