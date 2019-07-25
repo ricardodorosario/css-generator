@@ -1,6 +1,6 @@
-# sass-webpack-generator
+# css-generator
 
-Sass generator with Webpack
+Css generator with Sass and Webpack
 
 ## Execution sequence:
 
